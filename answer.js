@@ -71,8 +71,8 @@
   //   - 無し
   const showTodos = () => {
     // ul要素内を中身を一旦空っぽにして、現在のTodoリスト一覧を再度表示する
-    while(listContainer.firstChild) {
-      listContainer.removeChild( listContainer.firstChild );
+    while (listContainer.firstChild) {
+      listContainer.removeChild(listContainer.firstChild);
     }
 
     todos.forEach((todo, index) => {
@@ -141,12 +141,11 @@
   //   - index : 配列から削除したい要素のインデックス番号
   // - 戻り値
   //   - 無し
-  const promiseTaskOfDeletingTodo = (index) => {
+  const promiseTaskOfDeletingTodo =
     Promise
       .resolve(index)
       .then(deleteTodo)
       .then(showTodos);
-  };
 
   // 追加ボタンをクリックしたら `promiseTaskOfAddingTodo` を実行する
   addButton.addEventListener('click', promiseTaskOfAddingTodo);

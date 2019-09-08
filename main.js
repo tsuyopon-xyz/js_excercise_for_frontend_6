@@ -23,6 +23,12 @@
   // - 戻り値
   //   - `input[type="text"]`から取得した文字列を返す
 
+  const pickupTodoFromTextBox = () => {
+    const todo = textBox.value;
+    textBox.value = '';
+
+    return todo;
+  };
 
   // `validateTodo関数` を実装する
   // - 実現したい機能
@@ -33,6 +39,21 @@
   // - 戻り値
   //   - 引数で受け取ったtodoをそのまま返す
 
+  const validateTodo = (todo) =>{
+    if(todo == null ){
+      throw Error('何も入力されていません');
+    };
+    const checkfunction = todos.filter((_todo) => {
+      return _todo === todo;
+    });
+    
+    if(checkfunction.length > 0){
+    throw Error('同じ名前のタスクは既に作成されています');
+    }
+
+    return todo;
+  }
+
 
   // `addTodo関数` を実装する
   // - 実現したい機能
@@ -42,6 +63,9 @@
   // - 戻り値
   //   - 無し
 
+  const addTodo = (todo) => {
+    todos.push(todo);
+  }
 
   // `showTodos関数` を実装する
   // - 実現したい機能

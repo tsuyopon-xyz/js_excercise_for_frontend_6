@@ -10,7 +10,9 @@
   //   - 追加ボタン(button要素)
   //   - Todoリストを一覧表示するul要素
 
-
+  const textBox = document.getElementById("input-todo-box");
+  const addButton = document.getElementById("add-button");
+  const todoList = document.getElementById("todo-list");
 
   // `pickupTodoFromTextBox関数` を実装する
   // - 実現したい機能

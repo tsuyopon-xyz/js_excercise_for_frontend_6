@@ -93,3 +93,4 @@
   // 追加ボタンをクリックしたら `promiseTaskOfAddingTodo` を実行する
 
 })();
+

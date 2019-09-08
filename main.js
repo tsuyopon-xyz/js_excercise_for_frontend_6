@@ -44,11 +44,11 @@
       throw Error('何も入力されていません');
     };
     const checkfunction = todos.filter((_todo) => {
-      return _todo === todo;
+      return _todo == todo;
     });
     
     if(checkfunction.length > 0){
-    throw Error('同じ名前のタスクは既に作成されています');
+      throw Error('同じ名前のタスクは既に作成されています');
     }
 
     return todo;
